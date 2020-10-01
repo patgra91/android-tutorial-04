@@ -10,7 +10,7 @@ import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
     public static final String LOG_TAG = MainActivity.class.getSimpleName();
-    public static final String Extra_message = "com.example.android.twoactivities.extra.MESSAGE";
+    public static final String EXTRA_MESSAGE = "com.example.android.twoactivities.extra.MESSAGE";
     private EditText mMessageEditText;
 
     @Override
@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         Log.d(LOG_TAG, "Button clicked!");
         Intent intent = new Intent(this, SecondActivity.class);
         String message = mMessageEditText.getText().toString();
-        intent.putExtra(Extra_message, message);
+        intent.putExtra(EXTRA_MESSAGE, message);
         startActivity(intent);
     }
 }
